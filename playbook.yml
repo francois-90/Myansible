@@ -1,0 +1,10 @@
+- name: Installer MySQL
+  hosts: francois-Virtual-Machine
+  become: yes
+ 
+  tasks:
+    - name: Installer MySQL Server
+      apt:
+        name: mysql-server
+        state: present		
+

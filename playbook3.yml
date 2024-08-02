@@ -1,0 +1,9 @@
+- name: Test playbook
+  hosts: francois-Virtual-Machine
+  become: yes
+  vars:
+    time_zone: America/New_York
+  tasks:
+    - name: Set timezone to {{ time_zone }}
+      community.general.timezone:
+        name: "{{ time_zone }}"

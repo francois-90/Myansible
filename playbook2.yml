@@ -1,0 +1,10 @@
+- name: Test playbook
+  hosts: francois-Virtual-Machine
+  remote_user: root
+  become: yes
+  vars:
+    time_zone: America/New_York
+  tasks:
+    - name: Set timezone to {{ time_zone }}
+      community.general.timezone:
+        name: "{{ time_zone }}"
